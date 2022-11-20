@@ -59,20 +59,22 @@ export default function App() {
   }
 
   return (
-    <LinearGradient
-      style={styles.rootScreen}
-      colors={[Colors.primary800, Colors.accent500]}
-    >
-      <ImageBackground
-        source={require("./assets/Images/dice-blue.jpg")}
-        resizeMode="cover"
+    <>
+      <StatusBar style="light" />
+      <LinearGradient
         style={styles.rootScreen}
-        imageStyle={styles.backgroundImage}
+        colors={[Colors.primary800, Colors.accent500]}
       >
-        <StatusBar style="light" />
-        <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
-      </ImageBackground>
-    </LinearGradient>
+        <ImageBackground
+          source={require("./assets/Images/dice-blue.jpg")}
+          resizeMode="cover"
+          style={styles.rootScreen}
+          imageStyle={styles.backgroundImage}
+        >
+          <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
+        </ImageBackground>
+      </LinearGradient>
+    </>
   );
 }
 
